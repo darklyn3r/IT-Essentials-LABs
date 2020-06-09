@@ -1,3 +1,42 @@
+# /bin/bash
+opcion=9 
+
+while [[ $opcion != 0 ]]
+do
+clear 
+echo "..:ADMINISTRACION DE RED:.."
+echo " "
+echo "1) Hacer ping"
+echo "2) Trazar ruta"
+echo "3) Cambiar IP"
+echo "4) Consultar IP"
+echo "5) Cambiar mascara"
+echo "6) Sniffear (captura de trafico en la red)"
+echo "0) Salir"
+echo -n "SELECCIONE LA OPCION DESEADA:"
+read opcion
+case $opcion in 
+1) clear
+echo "..:HACER PING:.."
+echo "Ingrese la IP a realizarle el ping: "
+read ip
+ping -c 5 $ip
+read
+;;
+2) clear
+echo "..:TRAZAR RUTA A UNA IP:.."
+echo "Ingrese la IP:"
+read ip
+traceroute $ip
+read
+;;
+3) clear
+echo "..:CAMBIAR IP:.."
+echo "Ingrese la interfaz:"
+read eth
+echo "Ingrese la nueva IP:"
+read ip
+ifconfig $eth $ip
 echo "La nueva IP de la interface $eth es $ip"
 read
 ;;
