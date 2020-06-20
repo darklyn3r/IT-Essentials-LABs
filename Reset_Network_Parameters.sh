@@ -7,5 +7,6 @@ echo auto eth0 >> interfaces
 echo allow-hotplug eth0 >> interfaces
 echo iface eth0 inet dhcp >> interfaces
 sudo /etc/init.d/networking restart
+echo -e "IP Configuration successful.\n"
 ping -c 4 8.8.8.8
 exit
