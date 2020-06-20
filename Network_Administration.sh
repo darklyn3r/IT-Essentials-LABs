@@ -1,4 +1,4 @@
-# /bin/bash
+#!/bin/bash
 opcion=9 
 
 while [[ $opcion != 0 ]]
