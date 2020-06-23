@@ -44,7 +44,7 @@ read
 echo "..:CONSULTA DE IP:.."
 echo "Ingrese la interfaz: "
 read eth
-eco -e "Su IP es: "
+echo -e "Su IP es: "
 ifconfig $eth | grep "inet"
 read
 ;;
